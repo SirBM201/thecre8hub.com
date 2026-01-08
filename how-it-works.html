@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>How It Works — BMS Creative Concept</title>
+  <meta name="description" content="Customer flow: choose a plan, pay via Paystack, get access to digital tools and messaging-based support."/>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#0b1220;color:#eaf1ff;line-height:1.55}
+    a{color:#6ee7ff;text-decoration:none} a:hover{text-decoration:underline}
+    .nav{background:rgba(11,18,32,.85);border-bottom:1px solid rgba(255,255,255,.10);position:sticky;top:0}
+    .nav .inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .brand{font-weight:800} .menu{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{color:#eaf1ff;opacity:.92;font-weight:700;font-size:14px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .card{background:rgba(17,27,46,.75);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:18px}
+    h1{margin:10px 0 6px;font-size:34px;letter-spacing:-.3px}
+    p{color:#9fb0cc;margin:0 0 12px}
+    .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+    @media(max-width:900px){.steps{grid-template-columns:1fr}}
+    .num{display:inline-flex;width:34px;height:34px;border-radius:12px;align-items:center;justify-content:center;background:linear-gradient(135deg,#4ea1ff,#6ee7ff);color:#041018;font-weight:900;margin-right:10px}
+    .row{display:flex;gap:10px;align-items:flex-start}
+    .footer{margin-top:28px;border-top:1px solid rgba(255,255,255,.10);padding:18px 0;color:#9fb0cc;font-size:13px}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="inner">
+      <div class="brand"><a href="index.html" style="color:#eaf1ff;">BMS Creative Concept</a></div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html" style="color:#6ee7ff;">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>How it works</h1>
+    <p>
+      This page explains exactly how customers use our services, how payments are processed, and how access is delivered after payment.
+      This clarity is important for payment and compliance reviews.
+    </p>
+
+    <div class="steps">
+      <section class="card">
+        <div class="row">
+          <div class="num">1</div>
+          <div>
+            <h2 style="margin:0 0 6px;">Choose a plan</h2>
+            <p>Customers review our service plans and select the option that matches their needs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div class="num">2</div>
+          <div>
+            <h2 style="margin:0 0 6px;">Pay securely via Paystack</h2>
+            <p>Payments are processed securely by Paystack. We do not collect or store card details.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div class="num">3</div>
+          <div>
+            <h2 style="margin:0 0 6px;">Access is granted</h2>
+            <p>After successful payment, customers receive confirmation and access to the subscribed digital tools.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div class="num">4</div>
+          <div>
+            <h2 style="margin:0 0 6px;">Service delivery</h2>
+            <p>Depending on the plan, delivery may include web access and/or messaging-based assistance workflows.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div class="num">5</div>
+          <div>
+            <h2 style="margin:0 0 6px;">Support & billing help</h2>
+            <p>Customers can contact support for access issues, billing questions, or service clarification.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div class="num">6</div>
+          <div>
+            <h2 style="margin:0 0 6px;">Cancellation & refunds</h2>
+            <p>Rules for cancellations and refunds are defined clearly in the <a href="refund.html">Refund Policy</a> and <a href="terms.html">Terms</a>.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:14px;">
+      <h2 style="margin:0 0 8px;">Important notes</h2>
+      <p style="margin:0;color:#9fb0cc;">
+        BMS Creative Concept is a digital service provider. Payments are for online services and subscription access.
+        Please review our legal pages for full details.
+      </p>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> BMS Creative Concept · <a href="pricing.html">Pricing</a> · <a href="refund.html">Refund Policy</a>
+    </div>
+  </main>
+
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
