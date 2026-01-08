@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — BMS Creative Concept</title>
+  <meta name="description" content="Contact details and business address for BMS Creative Concept."/>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#0b1220;color:#eaf1ff;line-height:1.55}
+    a{color:#6ee7ff;text-decoration:none} a:hover{text-decoration:underline}
+    .nav{background:rgba(11,18,32,.85);border-bottom:1px solid rgba(255,255,255,.10);position:sticky;top:0}
+    .nav .inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .brand{font-weight:800} .menu{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{color:#eaf1ff;opacity:.92;font-weight:700;font-size:14px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .card{background:rgba(17,27,46,.75);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:18px}
+    h1{margin:10px 0 6px;font-size:34px;letter-spacing:-.3px}
+    p{color:#9fb0cc;margin:0 0 12px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .footer{margin-top:28px;border-top:1px solid rgba(255,255,255,.10);padding:18px 0;color:#9fb0cc;font-size:13px}
+    .label{color:#9fb0cc;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="inner">
+      <div class="brand"><a href="index.html" style="color:#eaf1ff;">BMS Creative Concept</a></div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html" style="color:#6ee7ff;">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p>For billing, support, or general enquiries, reach us using the details below.</p>
+
+    <div class="grid">
+      <section class="card">
+        <div class="label">Business</div>
+        <h2 style="margin:8px 0 8px;">BMS Creative Concept</h2>
+        <p style="margin:0;">Digital tools and subscription-based messaging support services.</p>
+
+        <div style="margin-top:14px;">
+          <div class="label">Email</div>
+          <p style="margin:6px 0 0;"><a href="mailto:info@thecre8hub.com">info@thecre8hub.com</a></p>
+
+          <div class="label" style="margin-top:12px;">Support Email</div>
+          <p style="margin:6px 0 0;"><a href="mailto:sirbmsuper201@hotmail.com">sirbmsuper201@hotmail.com</a></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="label">Address</div>
+        <h2 style="margin:8px 0 8px;">Registered Address</h2>
+        <p style="margin:0;">Gbadegeshin Street, 10, Ota, Ogun State, Nigeria</p>
+
+        <div style="margin-top:14px;">
+          <div class="label">Business Hours</div>
+          <p style="margin:6px 0 0;">Mon–Fri: 9:00 AM – 5:00 PM (WAT)</p>
+
+          <div class="label" style="margin-top:12px;">Legal</div>
+          <p style="margin:6px 0 0;">
+            <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="refund.html">Refunds</a>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> BMS Creative Concept
+    </div>
+  </main>
+
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
