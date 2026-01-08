@@ -2,475 +2,278 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="BMS Creative Concept provides digital tools, messaging-based business services, and advisory support solutions." />
-  <title>BMS Creative Concept | Official Website</title>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="BMS Creative Concept" />
-  <meta property="og:description" content="Digital tools, advisory services, and messaging-based business support solutions." />
-  <meta property="og:type" content="website" />
-
-  <!-- Basic favicon (optional). Replace with real icon later -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' font-size='26' fill='white' font-family='Arial'%3EBMS%3C/text%3E%3C/svg%3E" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMS Creative Concept — Digital Tools & Messaging-Based Business Support</title>
+  <meta name="description" content="BMS Creative Concept provides digital tools and subscription-based messaging support services, including guided information tools and WhatsApp-based assistance." />
   <style>
     :root{
-      --bg: #0b1220;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.08);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.72);
-      --muted2: rgba(255,255,255,.60);
-      --line: rgba(255,255,255,.12);
-      --brand: #7dd3fc;
-      --brand2: #34d399;
-      --danger: #fb7185;
-      --shadow: 0 20px 50px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 14px;
-      --max: 1100px;
+      --bg:#0b1220;
+      --card:#111b2e;
+      --muted:#9fb0cc;
+      --text:#eaf1ff;
+      --brand:#4ea1ff;
+      --brand2:#6ee7ff;
+      --line:rgba(255,255,255,.10);
+      --ok:#4ade80;
+      --warn:#fbbf24;
     }
-
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background:
-        radial-gradient(1200px 600px at 20% 10%, rgba(125,211,252,.18), transparent 55%),
-        radial-gradient(900px 500px at 80% 30%, rgba(52,211,153,.14), transparent 55%),
-        radial-gradient(800px 600px at 50% 100%, rgba(99,102,241,.12), transparent 60%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.55;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      background: radial-gradient(1200px 700px at 20% 10%, rgba(78,161,255,.18), transparent 60%),
+                  radial-gradient(900px 600px at 80% 30%, rgba(110,231,255,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
     }
-
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 28px 18px 70px;
-    }
-
-    /* Top Bar */
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: 999px;
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+    .nav{
+      position:sticky; top:0; z-index:10;
       backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.7);
+      border-bottom: 1px solid var(--line);
     }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px; max-width:1100px; margin:0 auto;}
     .brand{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-      min-width: 220px;
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
     }
     .logo{
-      width: 42px; height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(125,211,252,.35), rgba(52,211,153,.25));
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight: 800;
-      letter-spacing: .5px;
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      display:inline-flex; align-items:center; justify-content:center;
+      color:#041018; font-weight:900;
+      box-shadow: 0 10px 25px rgba(78,161,255,.18);
     }
-    .brand-title{
-      display:flex; flex-direction:column;
-      line-height:1.15;
-    }
-    .brand-title strong{ font-size: 14px; letter-spacing:.2px; }
-    .brand-title span{ font-size: 12px; color: var(--muted); }
-
-    nav{
-      display:flex;
-      align-items:center;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-    }
-    nav a{
-      font-size: 13px;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
-    nav a:hover{
-      color: var(--text);
-      background: rgba(255,255,255,.05);
-      border-color: var(--line);
+    .menu{display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:flex-end}
+    .menu a{color:var(--text); opacity:.92; font-weight:600; font-size:14px}
+    .menu a.active{color:var(--brand2)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:700; font-size:14px;
       text-decoration:none;
     }
-
-    /* Hero */
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#041018;
+      box-shadow: 0 12px 26px rgba(78,161,255,.18);
+    }
     .hero{
-      margin-top: 18px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: var(--shadow);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      position:relative;
+      display:grid; grid-template-columns: 1.15fr .85fr;
+      gap:22px; padding:34px 0 8px;
     }
-    .hero-inner{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 22px;
-      padding: 34px 26px;
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
     }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      font-size: 12px;
-      color: var(--muted);
-      border: 1px solid var(--line);
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.03);
+    .h1{font-size:44px; line-height:1.10; margin:0 0 12px; letter-spacing:-.5px}
+    .lead{font-size:16px; color:var(--muted); margin:0 0 18px}
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color:var(--muted); font-weight:700; font-size:13px;
+      margin-bottom:14px;
       width: fit-content;
     }
-    .dot{
-      width: 8px; height: 8px;
-      border-radius: 99px;
-      background: var(--brand2);
-      box-shadow: 0 0 0 6px rgba(52,211,153,.10);
-    }
-    h1{
-      margin: 14px 0 10px;
-      font-size: clamp(28px, 3.2vw, 44px);
-      line-height: 1.1;
-      letter-spacing: -0.6px;
-    }
-    .hero p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 62ch;
-    }
-    .hero-actions{
-      display:flex;
-      gap: 12px;
-      margin-top: 18px;
-      flex-wrap: wrap;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      color: var(--text);
-      font-size: 13px;
-      text-decoration:none;
-    }
-    .btn:hover{ background: rgba(255,255,255,.08); text-decoration:none; }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(125,211,252,.22), rgba(52,211,153,.18));
-      border-color: rgba(125,211,252,.35);
-    }
-    .meta{
-      display:grid;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius2);
-      background: rgba(0,0,0,.18);
-      padding: 16px;
-      align-content: start;
-    }
-    .meta h3{
-      margin: 0 0 8px;
-      font-size: 13px;
-      letter-spacing:.2px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-    .meta-item{
-      display:flex;
-      flex-direction:column;
-      gap: 2px;
-      padding: 10px 10px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    .meta-item .label{
-      font-size: 11px;
-      color: var(--muted2);
-    }
-    .meta-item .value{
-      font-size: 13px;
-      font-weight: 650;
-      letter-spacing: .15px;
-      word-break: break-word;
-    }
-
-    /* Sections */
-    .grid{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 16px;
-    }
+    .dot{width:8px; height:8px; border-radius:999px; background:var(--ok); box-shadow:0 0 0 3px rgba(74,222,128,.15)}
     .card{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.04);
-      padding: 18px 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,.22);
+      background: rgba(17,27,46,.75);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
     }
-    .card h2{
-      margin: 0 0 10px;
-      font-size: 16px;
-      letter-spacing: .2px;
+    .grid{
+      display:grid; grid-template-columns: repeat(4, 1fr);
+      gap:14px; margin:18px 0 28px;
     }
-    .card p{
-      margin: 0;
+    @media (max-width: 980px){ .grid{grid-template-columns: repeat(2,1fr)} }
+    @media (max-width: 520px){ .grid{grid-template-columns: 1fr} }
+    .tile h3{margin:0 0 8px; font-size:16px}
+    .tile p{margin:0; color:var(--muted); font-size:14px}
+    .section{margin:26px 0}
+    .section h2{margin:0 0 10px; font-size:22px}
+    .two{
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 900px){ .two{grid-template-columns:1fr} }
+    ul{margin:10px 0 0; padding:0 0 0 18px; color:var(--muted)}
+    li{margin:6px 0}
+    .mini{
+      font-size:12px; color:var(--muted)
+    }
+    .footer{
+      margin-top:36px;
+      border-top:1px solid var(--line);
+      padding:18px 0 26px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-grid{
+      display:grid; grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+    }
+    @media (max-width: 900px){ .footer-grid{grid-template-columns:1fr} }
+    .links{display:flex; gap:12px; flex-wrap:wrap}
+    .links a{color:var(--muted)}
+    .notice{
+      border-left: 4px solid var(--brand2);
+      padding:10px 12px;
+      background: rgba(110,231,255,.06);
+      border-radius:12px;
       color: var(--muted);
-      font-size: 14px;
-    }
-    .pill{
-      display:inline-flex;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 12px;
-      background: rgba(255,255,255,.03);
-      margin-right: 8px;
-      margin-bottom: 8px;
-    }
-
-    .span-7{ grid-column: span 7; }
-    .span-5{ grid-column: span 5; }
-    .span-6{ grid-column: span 6; }
-    .span-12{ grid-column: span 12; }
-
-    .list{
-      margin: 10px 0 0;
-      padding: 0;
-      list-style: none;
-      display:grid;
-      gap: 10px;
-    }
-    .list li{
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      border-radius: 14px;
-      padding: 12px 12px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .list strong{ color: var(--text); font-weight: 700; }
-
-    .foot{
-      margin-top: 18px;
-      border-top: 1px solid var(--line);
-      padding-top: 18px;
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .foot a{ color: var(--muted); }
-    .foot a:hover{ color: var(--text); }
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero-inner{ grid-template-columns: 1fr; }
-      .brand{ min-width: unset; }
-      nav{ justify-content:flex-start; }
-      .span-7,.span-5,.span-6,.span-12{ grid-column: span 12; }
-      .topbar{ border-radius: 18px; }
+      margin-top: 10px;
+      font-size: 13px;
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header class="topbar" role="banner">
+  <header class="nav">
+    <div class="nav-inner">
       <div class="brand">
-        <div class="logo" aria-label="BMS Logo">B</div>
-        <div class="brand-title">
-          <strong>BMS Creative Concept</strong>
-          <span>Official Business Website</span>
-        </div>
-      </div>
-
-<nav aria-label="Primary navigation">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-  <a href="privacy.html">Privacy</a>
-  <a href="terms.html">Terms</a>
-  <a href="refund.html">Refund</a>
-</nav>
-
-    </header>
-
-    <section class="hero" aria-label="Hero section">
-      <div class="hero-inner">
+        <div class="logo">BMS</div>
         <div>
-          <div class="kicker"><span class="dot"></span> Verified business information available for compliance and platform review</div>
-          <h1>Digital tools and messaging-based business support solutions.</h1>
-          <p>
-            BMS Creative Concept provides practical digital tools, advisory services, and messaging-based business support solutions.
-            Our services include product guidance platforms, business communication support, and structured information delivery
-            for individuals and small businesses.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact">Contact Information</a>
-            <a class="btn" href="#services">View Services</a>
-            <a class="btn" href="mailto:info@thecre8hub.com">Email Us</a>
-          </div>
-        </div>
-
-        <aside class="meta" aria-label="Business information summary">
-          <h3>Business Information (Meta/WhatsApp Verification)</h3>
-
-          <div class="meta-item">
-            <div class="label">Legal / Business Name</div>
-            <div class="value">BMS CREATIVE CONCEPT</div>
-          </div>
-
-          <div class="meta-item">
-            <div class="label">Business Phone</div>
-            <div class="value">+234 703 494 1158</div>
-          </div>
-
-          <div class="meta-item">
-            <div class="label">Business Address</div>
-            <div class="value">
-              10 GBADEGESHIN STREET, IGBEREN AREA, HONDA, IYANA IYESI, OTA 19702, OGUN, NIGERIA
-            </div>
-          </div>
-
-          <div class="meta-item">
-            <div class="label">Website</div>
-            <div class="value">https://thecre8hub.com</div>
-          </div>
-
-          <div class="meta-item">
-            <div class="label">Last updated</div>
-            <div class="value">January 5, 2026</div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="about" class="grid" aria-label="About section">
-      <div class="card span-7">
-        <h2>About BMS Creative Concept</h2>
-        <p>
-          BMS Creative Concept is a digital services brand focused on helping individuals and small businesses
-          access structured information, messaging-based support, and practical digital tools for everyday needs.
-          We also support platform integrations and business communication flows for compliant use on messaging channels.
-        </p>
-        <div style="margin-top: 12px;">
-          <span class="pill">Digital Tools</span>
-          <span class="pill">Messaging Support</span>
-          <span class="pill">Business Advisory</span>
-          <span class="pill">Compliance-First</span>
+          <div style="font-size:14px; opacity:.95;">BMS Creative Concept</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:700;">Digital tools & messaging-based support</div>
         </div>
       </div>
 
-      <div class="card span-5">
-        <h2>Operating Principles</h2>
-        <ul class="list">
-          <li><strong>Accuracy:</strong> We present structured information with clear guidance.</li>
-          <li><strong>Compliance:</strong> We respect platform rules, data protection, and user safety.</li>
-          <li><strong>Professionalism:</strong> Clear, consistent, and transparent business identity.</li>
-        </ul>
-      </div>
-    </section>
+      <nav class="menu" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn" href="terms.html">Terms</a>
+        <a class="btn" href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="services" class="grid" aria-label="Services section">
-      <div class="card span-6">
-        <h2>Core Services</h2>
-        <ul class="list">
-          <li><strong>Messaging-based business support:</strong> structured information delivery and guided user flows.</li>
-          <li><strong>Advisory and support solutions:</strong> practical guidance for business-related tasks and tools.</li>
-          <li><strong>Digital tools and workflows:</strong> assisting users through compliant automation and communication processes.</li>
-        </ul>
-      </div>
-
-      <div class="card span-6">
-        <h2>Service Use & Limitations</h2>
-        <ul class="list">
-          <li><strong>Information only:</strong> content is provided for general guidance and does not replace professional advice.</li>
-          <li><strong>Platform policies:</strong> communications are designed to comply with applicable platform and messaging rules.</li>
-          <li><strong>Responsible usage:</strong> users are expected to use services lawfully and responsibly.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="grid" aria-label="Contact section">
-      <div class="card span-12">
-        <h2>Contact Information</h2>
-        <p style="margin-bottom: 12px;">
-          For business inquiries, verification requests, or official correspondence, use the details below.
-        </p>
-
-        <div class="grid" style="margin-top: 0;">
-          <div class="card span-6" style="background: rgba(255,255,255,.03);">
-            <h2 style="font-size: 14px;">Business Address</h2>
-            <p>
-              <strong>BMS CREATIVE CONCEPT</strong><br />
-              10 GBADEGESHIN STREET, IGBEREN AREA, HONDA, IYANA IYESI,<br />
-              OTA 19702, OGUN STATE, NIGERIA
-            </p>
-          </div>
-
-          <div class="card span-6" style="background: rgba(255,255,255,.03);">
-            <h2 style="font-size: 14px;">Phone & Email</h2>
-            <p>
-              <strong>Phone:</strong> <a href="tel:+2347034941158">+234 703 494 1158</a><br />
-              <strong>Email:</strong> <a href="mailto:info@thecre8hub.com">info@thecre8hub.com</a><br />
-              <span style="color: var(--muted2); font-size: 12px;">
-                (Replace with your final domain email once created, if different.)
-              </span>
-            </p>
-          </div>
-        </div>
-
-        <p style="margin-top: 12px; color: var(--muted2); font-size: 12px;">
-          Last updated: January 5, 2026
-        </p>
-      </div>
-    </section>
-
-    <footer class="foot" role="contentinfo">
+  <main class="container">
+    <section class="hero">
       <div>
-        © <span id="year"></span> BMS Creative Concept. All rights reserved.
+        <div class="badge"><span class="dot"></span> Paystack review-ready business website</div>
+        <h1 class="h1">Digital tools and subscription-based messaging support for individuals and small businesses.</h1>
+        <p class="lead">
+          BMS Creative Concept provides structured digital tools, guidance content, and messaging-based assistance services.
+          Customers subscribe to access premium tools and support via web and WhatsApp-based workflows.
+        </p>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+          <a class="btn primary" href="pricing.html">View pricing</a>
+          <a class="btn" href="how-it-works.html">See how it works</a>
+          <a class="btn" href="services.html">Explore services</a>
+        </div>
+
+        <div class="notice">
+          <strong>Payments:</strong> Customers pay securely through Paystack checkout or Paystack subscription plans. After successful payment,
+          access is granted to the purchased digital service (web access and/or WhatsApp-based support).
+        </div>
       </div>
-      <div style="display:flex; gap: 12px; flex-wrap: wrap;">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="#contact">Contact</a>
+
+      <aside class="card">
+        <h2 style="margin:0 0 8px;">What we deliver</h2>
+        <p class="mini" style="margin:0 0 12px;">
+          Clear description of services and customer experience for compliance reviewers.
+        </p>
+        <ul>
+          <li><strong>Subscription access</strong> to digital tools and guided resources.</li>
+          <li><strong>Messaging support</strong> for user-initiated requests (WhatsApp-based workflows where applicable).</li>
+          <li><strong>Structured information delivery</strong> via web pages, dashboards, and automated responses.</li>
+          <li><strong>Customer support</strong> via email and ticket-based handling.</li>
+        </ul>
+        <div style="margin-top:14px; border-top:1px solid var(--line); padding-top:14px;">
+          <div class="mini"><strong>Business type:</strong> Digital services / subscription-based support</div>
+          <div class="mini"><strong>Delivery:</strong> Online access + messaging-based assistance</div>
+          <div class="mini"><strong>Refund policy:</strong> See <a href="refund.html">Refund Policy</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Core service areas</h2>
+      <div class="grid">
+        <div class="card tile">
+          <h3>Digital Tools</h3>
+          <p>Access structured tools and guided resources designed to help users complete tasks efficiently.</p>
+        </div>
+        <div class="card tile">
+          <h3>Subscription Support</h3>
+          <p>Paid plans provide ongoing support and access to premium resources within plan limits.</p>
+        </div>
+        <div class="card tile">
+          <h3>Messaging-Based Assistance</h3>
+          <p>Where applicable, users interact via WhatsApp for guided requests and delivery of responses.</p>
+        </div>
+        <div class="card tile">
+          <h3>Customer Care</h3>
+          <p>Email support, service updates, and resolution handling for billing and product access.</p>
+        </div>
       </div>
-    </footer>
-  </div>
+    </section>
+
+    <section class="section two">
+      <div class="card">
+        <h2>How customers pay</h2>
+        <ul>
+          <li>Customers select a plan on the <a href="pricing.html">Pricing</a> page.</li>
+          <li>Payment is completed via Paystack (card, bank transfer, or available Paystack channels).</li>
+          <li>After payment, customers receive service access and confirmation via email/WhatsApp (where configured).</li>
+        </ul>
+        <p class="mini" style="margin-top:12px;">
+          We do not collect customer card details. Payments are processed securely by Paystack.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>How services are delivered</h2>
+        <ul>
+          <li>Instant access to the purchased digital service where applicable.</li>
+          <li>Subscription period access (monthly/quarterly/yearly) for premium tools and support.</li>
+          <li>Clear cancellation and refund rules are available in our <a href="terms.html">Terms</a> and <a href="refund.html">Refund Policy</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="footer-grid">
+        <div>
+          <div style="font-weight:800; margin-bottom:6px;">BMS Creative Concept</div>
+          <div>Address: Gbadegeshin Street, 10, Ota, Ogun State, Nigeria</div>
+          <div>Email: <a href="mailto:info@thecre8hub.com">info@thecre8hub.com</a> | Support: <a href="mailto:sirbmsuper201@hotmail.com">sirbmsuper201@hotmail.com</a></div>
+          <div class="mini" style="margin-top:8px;">
+            © <span id="y"></span> BMS Creative Concept. All rights reserved.
+          </div>
+        </div>
+        <div>
+          <div class="links" style="justify-content:flex-end;">
+            <a href="services.html">Services</a>
+            <a href="how-it-works.html">How it works</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="refund.html">Refunds</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script>
-    // Keep copyright current even if date on page is fixed for compliance.
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
