@@ -3,48 +3,80 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>User Data Deletion — BMS Creative Concept</title>
-  <meta name="description" content="Instructions for users to request deletion of their data."/>
+  <title>User Data Deletion — Naija Hustle Tax Guide</title>
+  <meta name="description" content="How users can request deletion of their personal data."/>
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#0b1220;color:#eaf1ff;line-height:1.65}
-    a{color:#6ee7ff;text-decoration:none} a:hover{text-decoration:underline}
-    .container{max-width:900px;margin:0 auto;padding:24px}
-    .card{background:rgba(17,27,46,.75);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:18px}
-    h1{margin:10px 0 6px;font-size:34px;letter-spacing:-.3px}
-    p,li{color:#9fb0cc}
-    ul{margin:8px 0 0;padding-left:18px}
-    .mini{font-size:13px;color:#9fb0cc}
-  </style>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="assets/logo.jpg" alt="BMS Creative Concept logo"
+             style="width:42px;height:42px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.10);padding:6px;background:rgba(255,255,255,.06);">
+        <div>
+          <div class="brand-title">Naija Hustle Tax Guide</div>
+          <div class="brand-sub">User Data Deletion</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="privacy.html">Privacy</a>
+        <a data-nav href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="container">
-    <h1>User Data Deletion</h1>
-    <p class="mini">Last updated: <strong>January 2026</strong></p>
-
     <section class="card">
-      <p>
-        If you used BMS Creative Concept services and would like us to delete your personal data, you can request deletion using the steps below.
-      </p>
+      <h1 class="h1" style="font-size:44px">User Data Deletion</h1>
+      <p class="p"><small>Last updated: <b>January 2026</b></small></p>
 
-      <h2 style="margin:18px 0 8px;">How to request deletion</h2>
-      <ul>
-        <li>Email us at: <a href="mailto:info@thecre8hub.com">info@thecre8hub.com</a></li>
-        <li>Subject: <strong>Data Deletion Request</strong></li>
-        <li>Include: your email/phone used on our service and any relevant account identifiers</li>
+      <div class="notice">
+        <b>How to request deletion:</b> If you want us to delete your personal data, follow the steps below.
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="section-title">Step 1 — Send a request</div>
+      <ul class="list">
+        <li>Email: <a href="mailto:info@thecre8hub.com">info@thecre8hub.com</a></li>
+        <li>Subject: <b>Data Deletion Request</b></li>
+        <li>Include: phone number/email used on the service, and any relevant identifiers.</li>
       </ul>
 
-      <h2 style="margin:18px 0 8px;">What happens next</h2>
-      <ul>
-        <li>We confirm ownership of the request.</li>
-        <li>We delete or anonymize personal data unless retention is required by law (e.g., payment records).</li>
-        <li>We respond to confirm completion.</li>
+      <div class="section-title">Step 2 — Verification</div>
+      <p class="p">
+        To protect users, we may ask for additional information to confirm ownership of the account before deletion.
+      </p>
+
+      <div class="section-title">Step 3 — Completion</div>
+      <ul class="list">
+        <li>We delete or anonymize personal data where feasible.</li>
+        <li>We may retain limited records where required by law (e.g., payment references for auditing).</li>
+        <li>We confirm completion by email.</li>
       </ul>
 
-      <p style="margin-top:12px;">
-        For more information, see our <a href="privacy.html">Privacy Policy</a>.
-      </p>
+      <div class="hr"></div>
+
+      <div class="notice">
+        For more detail, please see our <a href="privacy.html">Privacy Policy</a>.
+      </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span data-year></span> BMS Creative Concept</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund-policy.html">Refunds</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
   </main>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
