@@ -1,284 +1,186 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BMS Creative Concept — Digital Tools & Messaging-Based Business Support</title>
-  <meta name="description" content="BMS Creative Concept provides digital tools and subscription-based messaging support services, including guided information tools and WhatsApp-based assistance." />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Naija Hustle Tax Guide — thecre8hub.com</title>
+  <meta name="description" content="Naija Hustle Tax Guide is a subscription-based WhatsApp + web assistant that helps Nigerians understand taxes, compliance and small business obligations with clear, practical guidance."/>
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111b2e;
-      --muted:#9fb0cc;
-      --text:#eaf1ff;
-      --brand:#4ea1ff;
-      --brand2:#6ee7ff;
-      --line:rgba(255,255,255,.10);
-      --ok:#4ade80;
-      --warn:#fbbf24;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-      background: radial-gradient(1200px 700px at 20% 10%, rgba(78,161,255,.18), transparent 60%),
-                  radial-gradient(900px 600px at 80% 30%, rgba(110,231,255,.12), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-    a{color:var(--brand); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px; margin:0 auto; padding:24px}
-    .nav{
-      position:sticky; top:0; z-index:10;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.7);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px; max-width:1100px; margin:0 auto;}
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:700; letter-spacing:.2px;
-    }
-    .logo{
-      width:34px; height:34px; border-radius:10px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      display:inline-flex; align-items:center; justify-content:center;
-      color:#041018; font-weight:900;
-      box-shadow: 0 10px 25px rgba(78,161,255,.18);
-    }
-    .menu{display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:flex-end}
-    .menu a{color:var(--text); opacity:.92; font-weight:600; font-size:14px}
-    .menu a.active{color:var(--brand2)}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:700; font-size:14px;
-      text-decoration:none;
-    }
-    .btn.primary{
-      border:none;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color:#041018;
-      box-shadow: 0 12px 26px rgba(78,161,255,.18);
-    }
-    .hero{
-      display:grid; grid-template-columns: 1.15fr .85fr;
-      gap:22px; padding:34px 0 8px;
-    }
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
-    }
-    .h1{font-size:44px; line-height:1.10; margin:0 0 12px; letter-spacing:-.5px}
-    .lead{font-size:16px; color:var(--muted); margin:0 0 18px}
-    .badge{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      color:var(--muted); font-weight:700; font-size:13px;
-      margin-bottom:14px;
-      width: fit-content;
-    }
-    .dot{width:8px; height:8px; border-radius:999px; background:var(--ok); box-shadow:0 0 0 3px rgba(74,222,128,.15)}
-    .card{
-      background: rgba(17,27,46,.75);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:18px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.25);
-    }
-    .grid{
-      display:grid; grid-template-columns: repeat(4, 1fr);
-      gap:14px; margin:18px 0 28px;
-    }
-    @media (max-width: 980px){ .grid{grid-template-columns: repeat(2,1fr)} }
-    @media (max-width: 520px){ .grid{grid-template-columns: 1fr} }
-    .tile h3{margin:0 0 8px; font-size:16px}
-    .tile p{margin:0; color:var(--muted); font-size:14px}
-    .section{margin:26px 0}
-    .section h2{margin:0 0 10px; font-size:22px}
-    .two{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 900px){ .two{grid-template-columns:1fr} }
-    ul{margin:10px 0 0; padding:0 0 0 18px; color:var(--muted)}
-    li{margin:6px 0}
-    .mini{
-      font-size:12px; color:var(--muted)
-    }
-    .footer{
-      margin-top:36px;
-      border-top:1px solid var(--line);
-      padding:18px 0 26px;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer-grid{
-      display:grid; grid-template-columns: 1.1fr .9fr;
-      gap:14px;
-    }
-    @media (max-width: 900px){ .footer-grid{grid-template-columns:1fr} }
-    .links{display:flex; gap:12px; flex-wrap:wrap}
-    .links a{color:var(--muted)}
-    .notice{
-      border-left: 4px solid var(--brand2);
-      padding:10px 12px;
-      background: rgba(110,231,255,.06);
-      border-radius:12px;
-      color: var(--muted);
-      margin-top: 10px;
-      font-size: 13px;
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="assets/styles.css">
+  <meta property="og:title" content="Naija Hustle Tax Guide — thecre8hub.com">
+  <meta property="og:description" content="Subscription-based WhatsApp + web guidance for taxes and small business compliance in Nigeria.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thecre8hub.com/">
+  <meta property="og:image" content="https://thecre8hub.com/assets/og-image.png">
 
+  <!-- Optional: helpful for business verification -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BMS Creative Concept",
+    "url": "https://thecre8hub.com",
+    "brand": "Naija Hustle Tax Guide",
+    "email": "info@thecre8hub.com",
+    "description": "Subscription-based WhatsApp + web assistant for Nigerian tax education and small business compliance guidance.",
+    "sameAs": []
+  }
+  </script>
+</head>
 <body>
   <header class="nav">
     <div class="nav-inner">
-     <div class="brand">
-  <img src="assets/logo.png" alt="BMS Creative Concept logo"
-       style="width:38px;height:38px;border-radius:10px;object-fit:contain;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.06);padding:6px;">
-  <div>
-    <div style="font-size:14px; opacity:.95;">BMS Creative Concept</div>
-    <div style="font-size:12px; color:var(--muted); font-weight:700;">
-      Digital tools & messaging-based support
-    </div>
-  </div>
-</div>
+      <div class="brand">
+        <img src="assets/logo.jpg" alt="BMS Creative Concept logo"
+             style="width:42px;height:42px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.06);padding:6px;">
+        <div>
+          <div class="brand-title">Naija Hustle Tax Guide</div>
+          <div class="brand-sub">By BMS Creative Concept • thecre8hub.com</div>
+        </div>
+      </div>
 
-
-      <nav class="menu" aria-label="Primary navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn" href="terms.html">Terms</a>
-        <a class="btn" href="privacy.html">Privacy</a>
+      <nav class="nav-links">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="pricing.html">Pricing</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="contact.html">Contact</a>
+        <a data-nav href="privacy.html">Privacy</a>
+        <a data-nav href="terms.html">Terms</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <div>
-        <div class="badge"><span class="dot"></span> Paystack review-ready business website</div>
-        <h1 class="h1">Digital tools and subscription-based messaging support for individuals and small businesses.</h1>
-        <p class="lead">
-          BMS Creative Concept provides structured digital tools, guidance content, and messaging-based assistance services.
-          Customers subscribe to access premium tools and support via web and WhatsApp-based workflows.
-        </p>
-
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-          <a class="btn primary" href="pricing.html">View pricing</a>
-          <a class="btn" href="how-it-works.html">See how it works</a>
-          <a class="btn" href="services.html">Explore services</a>
+      <div class="card">
+        <div class="badges">
+          <span class="badge"><span class="dot"></span> Subscription-based service</span>
+          <span class="badge"><span class="dot brand"></span> WhatsApp + Web</span>
+          <span class="badge"><span class="dot warn"></span> Educational guidance (not legal advice)</span>
         </div>
 
-        <div class="notice">
-          <strong>Payments:</strong> Customers pay securely through Paystack checkout or Paystack subscription plans. After successful payment,
-          access is granted to the purchased digital service (web access and/or WhatsApp-based support).
+        <h1 class="h1">Clear Nigerian tax guidance for hustlers & small businesses.</h1>
+        <p class="p">
+          Naija Hustle Tax Guide helps individuals, creators, and small businesses understand tax obligations, filing basics,
+          record-keeping, and compliance steps—using simple explanations and practical examples.
+        </p>
+
+        <div class="btns">
+          <a class="btn primary" href="pricing.html">View pricing plans</a>
+          <a class="btn" href="contact.html">Contact support</a>
+          <a class="btn" href="platform-api-policy.html">Platform & API policy</a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="grid2">
+          <div class="notice">
+            <b>What you get</b><br>
+            Practical answers, step-by-step guidance, templates, and reminders—delivered via WhatsApp and web access.
+          </div>
+          <div class="notice">
+            <b>Payments</b><br>
+            Payments are processed securely. Subscription gives access to the service during the active plan period.
+          </div>
         </div>
       </div>
 
-      <aside class="card">
-        <h2 style="margin:0 0 8px;">What we deliver</h2>
-        <p class="mini" style="margin:0 0 12px;">
-          Clear description of services and customer experience for compliance reviewers.
+      <aside class="card soft">
+        <div class="section-title">Service summary for reviewers</div>
+        <p class="p" style="margin-bottom:10px">
+          This website exists for business verification and transparency. It clearly describes services, pricing,
+          policies (privacy/terms/refunds), and contact information.
         </p>
-        <ul>
-          <li><strong>Subscription access</strong> to digital tools and guided resources.</li>
-          <li><strong>Messaging support</strong> for user-initiated requests (WhatsApp-based workflows where applicable).</li>
-          <li><strong>Structured information delivery</strong> via web pages, dashboards, and automated responses.</li>
-          <li><strong>Customer support</strong> via email and ticket-based handling.</li>
+        <ul class="list">
+          <li><b>Primary service:</b> subscription-based tax education and compliance guidance.</li>
+          <li><b>Delivery channels:</b> WhatsApp messaging and web pages.</li>
+          <li><b>No surveillance:</b> we do not run social listening or audience-surveillance tools.</li>
+          <li><b>No data resale:</b> we do not sell user data.</li>
+          <li><b>Support:</b> email support is available via our Contact page.</li>
         </ul>
-        <div style="margin-top:14px; border-top:1px solid var(--line); padding-top:14px;">
-          <div class="mini"><strong>Business type:</strong> Digital services / subscription-based support</div>
-          <div class="mini"><strong>Delivery:</strong> Online access + messaging-based assistance</div>
-          <div class="mini"><strong>Refund policy:</strong> See <a href="refund.html">Refund Policy</a></div>
-        </div>
+        <div class="hr"></div>
+        <div class="section-title">Quick links</div>
+        <ul class="list">
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="data-deletion.html">User Data Deletion</a></li>
+        </ul>
       </aside>
     </section>
 
-    <section class="section">
-      <h2>Core service areas</h2>
-      <div class="grid">
-        <div class="card tile">
-          <h3>Digital Tools</h3>
-          <p>Access structured tools and guided resources designed to help users complete tasks efficiently.</p>
-        </div>
-        <div class="card tile">
-          <h3>Subscription Support</h3>
-          <p>Paid plans provide ongoing support and access to premium resources within plan limits.</p>
-        </div>
-        <div class="card tile">
-          <h3>Messaging-Based Assistance</h3>
-          <p>Where applicable, users interact via WhatsApp for guided requests and delivery of responses.</p>
-        </div>
-        <div class="card tile">
-          <h3>Customer Care</h3>
-          <p>Email support, service updates, and resolution handling for billing and product access.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section two">
-      <div class="card">
-        <h2>How customers pay</h2>
-        <ul>
-          <li>Customers select a plan on the <a href="pricing.html">Pricing</a> page.</li>
-          <li>Payment is completed via Paystack (card, bank transfer, or available Paystack channels).</li>
-          <li>After payment, customers receive service access and confirmation via email/WhatsApp (where configured).</li>
+    <div class="section-title">What users can do</div>
+    <section class="grid3">
+      <div class="card soft">
+        <b>1) Ask questions</b>
+        <ul class="list">
+          <li>Taxes for freelancers, SMEs, creators, side hustles</li>
+          <li>Compliance checklists and record-keeping tips</li>
+          <li>Simple explanations for confusing terms</li>
         </ul>
-        <p class="mini" style="margin-top:12px;">
-          We do not collect customer card details. Payments are processed securely by Paystack.
-        </p>
       </div>
 
-      <div class="card">
-        <h2>How services are delivered</h2>
-        <ul>
-          <li>Instant access to the purchased digital service where applicable.</li>
-          <li>Subscription period access (monthly/quarterly/yearly) for premium tools and support.</li>
-          <li>Clear cancellation and refund rules are available in our <a href="terms.html">Terms</a> and <a href="refund.html">Refund Policy</a>.</li>
+      <div class="card soft">
+        <b>2) Get structured guidance</b>
+        <ul class="list">
+          <li>Step-by-step responses</li>
+          <li>Templates and examples (where applicable)</li>
+          <li>Practical do’s and don’ts</li>
+        </ul>
+      </div>
+
+      <div class="card soft">
+        <b>3) Use responsibly</b>
+        <ul class="list">
+          <li>Educational guidance only</li>
+          <li>No impersonation of government agencies</li>
+          <li>Users remain responsible for final decisions</li>
         </ul>
       </div>
     </section>
 
-    <section class="footer">
-      <div class="footer-grid">
-        <div>
-          <div style="font-weight:800; margin-bottom:6px;">BMS Creative Concept</div>
-          <div>Address: Gbadegeshin Street, 10, Ota, Ogun State, Nigeria</div>
-          <div>Email: <a href="mailto:info@thecre8hub.com">info@thecre8hub.com</a> | Support: <a href="mailto:sirbmsuper201@hotmail.com">sirbmsuper201@hotmail.com</a></div>
-          <div class="mini" style="margin-top:8px;">
-            © <span id="y"></span> BMS Creative Concept. All rights reserved.
-          </div>
-        </div>
-        <div>
-          <div class="links" style="justify-content:flex-end;">
-            <a href="services.html">Services</a>
-            <a href="how-it-works.html">How it works</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="refund.html">Refunds</a>
-          </div>
-        </div>
+    <div class="section-title">Business identity</div>
+    <section class="card">
+      <div class="kv">
+        <b>Business / Brand</b>
+        <div>Naija Hustle Tax Guide (BMS Creative Concept)</div>
+
+        <b>Website</b>
+        <div>https://thecre8hub.com</div>
+
+        <b>Support email</b>
+        <div><a href="mailto:info@thecre8hub.com">info@thecre8hub.com</a> (recommended for verification)</div>
+
+        <b>Alternative contact</b>
+        <div><a href="mailto:sirbmsuper201@gmail.com">sirbmsuper201@gmail.com</a></div>
+
+        <b>Service location</b>
+        <div>Nigeria (online service)</div>
+      </div>
+
+      <div class="hr"></div>
+      <div class="notice">
+        <b>Compliance note:</b> Naija Hustle Tax Guide is an educational service and does not replace professional legal,
+        tax, or accounting advice. Where needed, users should consult licensed professionals.
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span data-year></span> BMS Creative Concept • Naija Hustle Tax Guide</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="refund-policy.html">Refunds</a>
+          <a href="platform-api-policy.html">Platform & API Policy</a>
+          <a href="data-deletion.html">Data Deletion</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
